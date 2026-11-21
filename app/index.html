@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: a cited guide to every trophy, a roadmap to the platinum, the missables flagged, and a checklist that saves in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <h1>Leonida Trophy Atlas</h1>
+    <p class="tagline">Grand Theft Auto VI · PlayStation 5 — the offline trophy guide &amp; tracker</p>
+    <p class="listmakeup">The official list: <strong>55 trophies</strong> · 1 platinum · 2 gold · 6 silver · 46 bronze · 28 hidden on PSN until earned</p>
+  </div>
+  <div class="scoreboard">
+    <div class="bignum"><span id="earned-count">0</span><span class="of"> / 55 earned</span></div>
+    <div class="bar" aria-hidden="true"><div id="earned-bar"></div></div>
+    <p id="earned-note">Platinum progress: 0%</p>
+    <label class="spoiler-switch"><input type="checkbox" id="spoiler-toggle"> Spoiler shield — hide story trophies until earned</label>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Views">
+  <button type="button" data-view="checklist" class="active">Checklist &amp; guide</button>
+  <button type="button" data-view="roadmap">Roadmap to platinum</button>
+  <button type="button" data-view="missables">Missables <span id="missable-count" class="pill">5</span></button>
+  <button type="button" data-view="planner">Next up</button>
+  <button type="button" data-view="save">Save &amp; settings</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="checklayout">
+      <div class="listpane">
+        <div class="controls">
+          <input id="search" type="search" placeholder="Search trophies, missions, places…  ( press / )" autocomplete="off">
+          <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+            <button type="button" data-kind="all" class="chip active">All 55</button>
+            <button type="button" data-kind="story" class="chip">Story</button>
+            <button type="button" data-kind="missable" class="chip">Missable</button>
+            <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+            <button type="button" data-kind="activities" class="chip">Activities</button>
+            <button type="button" data-kind="online" class="chip">Online</button>
+          </div>
+          <div class="row2">
+            <label>Grade
+              <select id="grade-filter">
+                <option value="all">All grades</option>
+                <option value="platinum">Platinum</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+              </select>
+            </label>
+            <label class="checkline"><input type="checkbox" id="hide-earned"> Hide earned</label>
+            <span id="result-count" class="muted"></span>
+          </div>
+        </div>
+        <ul id="trophy-list" class="trophylist"></ul>
+      </div>
+      <article id="guide-pane" class="guidepane" aria-live="polite"></article>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden></section>
+  <section id="view-missables" class="view" hidden></section>
+  <section id="view-planner" class="view" hidden></section>
+  <section id="view-save" class="view" hidden></section>
+</main>
+
+<footer>
+  <p><strong>Works fully offline.</strong> Every file this page loads sits beside it; your progress never leaves this browser.
+  Names, descriptions and grades are the official ones, as PlayStation publishes them (list frozen 2026-11-18 from Exophase and PSNProfiles).
+  Every guide is written for this atlas in its own words and cites its sources in the guide pane.
+  Keys: <kbd>1</kbd>–<kbd>5</kbd> switch views · <kbd>/</kbd> search · <kbd>s</kbd> spoiler shield · <kbd>x</kbd> tick the open trophy.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
